@@ -1,0 +1,256 @@
+@charset "utf-8";
+@import url(../css/swiper.min.css);
+
+
+/*=======共通設定=========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  background-color: #d5d5d5;
+}
+
+@keyframes load {
+  100% {
+    opacity: 1;
+  }
+}
+
+#wrapper{
+  width: auto;
+  height: auto;
+}
+
+/*========header========*/
+.header .footer {
+  padding: 10px 30px;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: #faf0e6;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+a {	
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+.nav {
+  margin: 0 0 0 auto;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+.nav ul li {
+  margin: 15px;
+  font-size: 15px;
+}
+
+/*=======left_icon========*/
+.icon_wrapper{
+  font-size: 20px;
+  display: flex;
+  border-left: 1px solid #979797;
+  padding-left: 10px;
+}
+.icon_wrapper i{
+  margin: 15px;
+}
+
+/*user-menu*/
+.user-menu {
+  padding-inline-start: 0;
+      position: relative;
+      width: fit-content;
+      width: -moz-fit-content;
+      margin: 4rem auto;
+      cursor: pointer; 
+}
+
+.user-menu li {
+  background-color: #faf0e6;
+      list-style: none;
+      width: 250px;
+      padding: 10px;
+      border-bottom: solid darkgreen thin;
+      display: grid;
+      align-items: center;
+      transition: opacity .4s, height .4s, background-color .1s, color .1s;
+}
+
+.user-menu li:last-child {
+  border-bottom: none;
+}
+
+li.user-menu-title {
+  background-color: darkgreen;
+  z-index: 1;
+  color: white; 
+}
+.user-menu li:not(.user-menu-title) {
+  opacity: 0;
+      height: 0;
+      position: relative;
+}
+.user-menu:hover > li:not(user-menu-title) {
+  opacity: 1;
+      height: 2rem;
+}
+
+.user-menu li:not(.user-menu-title):hover {
+  background-color: rgba(62, 139, 30, 0.52);
+      color: white; 
+}
+
+/*First_contents*/
+.first_box{
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  opacity: 0.01;
+  animation: load 1.5s 0.8s ease-out forwards;
+}
+
+.f-text_left {
+  display: table;
+  width: 40%;
+  position: relative;
+  height: 100%;
+}
+.f-text_left > div {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+}
+.f-text_left > div p {
+  color: #fff;
+  text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#top_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 150%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/*second_contents*/
+.second_box {
+  position: relative;
+  height: 1166px;
+}
+
+.second_box img, .third_box img{
+  width: 100%;
+}
+
+.s-text_right{
+  font-size: 2em;
+  font-weight: 800;
+  right: 20px;
+  top: 670px;
+  position: absolute;
+  color: #fff;
+}
+
+.s-btn{
+    position: absolute;
+    background: rgba(185, 69, 20, 0.5);
+    top: 855px;
+    right: 620px;
+    color:#fff;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius:30px;
+    border: none;
+    width: 100px;
+    height: 45px;
+  }
+
+  .sec-set{
+    max-height: 1012px;
+  }
+
+  /*third_contents*/
+  .third_box{
+    position: relative;
+    height: 629px;
+  } 
+
+  /*third_box from 119*/
+
+  .t-top_text{
+    color: #2608eb;
+    font-size: 3em;
+    font-weight: 850;
+    right: 87%;
+    top: 130px;
+    left: 60px;
+    position: absolute;
+  }
+
+  .t-text_left{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 800;
+    right: 75%;
+    top: 215px;
+    position: absolute;
+  }
+
+  .thi-set{
+    max-height: 629px;
+  }
+
+  /*Product_swiper*/
+  /*スライド*/
+  
+  .swiper-slide {
+    cursor: pointer;
+  }
+  
+  .sample03 .swiper-button-prev,
+  .sample03 .swiper-button-next {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .sample03 .swiper-button-prev,
+    .sample03 .swiper-button-next {
+      display: block;
+    }
+  }
+  .swiper-slide img{
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    max-width:350px;
+  }
+/*スライドここまで*/
